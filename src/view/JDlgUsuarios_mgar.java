@@ -5,6 +5,7 @@
 package view;
 
 
+import Pesquisar.JDlgUsuariosPesquisar;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -321,7 +322,8 @@ public class JDlgUsuarios_mgar extends javax.swing.JDialog {
     }//GEN-LAST:event_jPwdSenha_mgarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-        
+        JDlgUsuariosPesquisar jDlgUsuariosPesquisar = new JDlgUsuariosPesquisar(null, true);
+        jDlgUsuariosPesquisar.setVisible(true);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jTxtCodigo_mgarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtCodigo_mgarActionPerformed
@@ -366,17 +368,17 @@ public class JDlgUsuarios_mgar extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-        // TODO add your handling code here:
-         Util.habilitar(true, jBtnAlterar, jBtnCancelar, jBtnConfirmar, jBtnExcluir, jBtnPesquisar,
-                jBtnIncluir,jTxtCodigo_mgar,jTxtNome_mgar,jTxtApelido_mgar,jFmtCpf_mgar,jPwdSenha_mgar,
-                jCboNivel_mgar,jChbAtivo_mgar,jFmtDataNasc_mgar);
-       
-        Util.habilitar(false,  jBtnAlterar, jBtnExcluir, jBtnPesquisar,
-                jBtnIncluir);
+         int resp = JOptionPane.showConfirmDialog(null, "Deseja excluir?",
+                "Deletar Registro", JOptionPane.YES_NO_OPTION);
         
-        Util.limpar(jTxtCodigo_mgar,jTxtNome_mgar,jTxtApelido_mgar,jFmtCpf_mgar,jPwdSenha_mgar,
+       if (resp == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Exclusão realizada.");
+            Util.limpar(jTxtCodigo_mgar,jTxtNome_mgar,jTxtApelido_mgar,jFmtCpf_mgar,jPwdSenha_mgar,
                 jCboNivel_mgar,jChbAtivo_mgar,jFmtDataNasc_mgar);
-       
+        } else {
+            JOptionPane.showMessageDialog(null, "Exclusão cancelada");
+        }
+               
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jFmtCpf_mgarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFmtCpf_mgarActionPerformed

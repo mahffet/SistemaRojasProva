@@ -6,9 +6,11 @@
 package view;
 
 
+import Pesquisar.JDlgProdutosPesquisar;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 import tools.Util;
@@ -254,16 +256,17 @@ public class JDlgProdutos_mgar extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-Util.habilitar(true, jBtnAlterar, jBtnCancelar, jBtnConfirmar, jBtnExcluir, jBtnPesquisar,
-                jBtnIncluir, jTxtCodigo_mgar, jTxtNome_mgar,jFmtDataLancamento_mgar,jTxtGenero_mgar,
+        int resp = JOptionPane.showConfirmDialog(null, "Deseja excluir?",
+                "Deletar Registro", JOptionPane.YES_NO_OPTION);
+        
+       if (resp == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Exclusão realizada.");
+            Util.limpar(jTxtCodigo_mgar, jTxtNome_mgar,jFmtDataLancamento_mgar,jTxtGenero_mgar,
                 jTxtPreco_mgar,jTxtDiretor_mgar,jTxtClassificacaoIdade_mgar);
-        
-        
-        Util.habilitar(false, jBtnAlterar, jBtnExcluir, jBtnPesquisar, 
-                jBtnIncluir);
-        
-        Util.limpar(jTxtCodigo_mgar, jTxtNome_mgar,jFmtDataLancamento_mgar,jTxtGenero_mgar,
-                jTxtPreco_mgar,jTxtDiretor_mgar,jTxtClassificacaoIdade_mgar);       
+        } else {
+            JOptionPane.showMessageDialog(null, "Exclusão cancelada");
+        }
+          
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
@@ -293,7 +296,8 @@ Util.habilitar(false, jBtnAlterar, jBtnCancelar, jBtnConfirmar, jBtnExcluir, jBt
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-        
+        JDlgProdutosPesquisar jDlgProdutosPesquisar = new JDlgProdutosPesquisar(null, true);
+        jDlgProdutosPesquisar.setVisible(true);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed

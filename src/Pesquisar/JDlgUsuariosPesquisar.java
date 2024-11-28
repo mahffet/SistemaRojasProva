@@ -16,6 +16,8 @@ public class JDlgUsuariosPesquisar extends javax.swing.JDialog {
     public JDlgUsuariosPesquisar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Usuarios Pesquisar");
     }
 
     /**
@@ -77,6 +79,7 @@ public class JDlgUsuariosPesquisar extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

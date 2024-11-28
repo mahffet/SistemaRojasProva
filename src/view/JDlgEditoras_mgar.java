@@ -5,9 +5,11 @@
  */
 package view;
 
+import Pesquisar.JDlgEditorasPesquisar;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 import tools.Util;
@@ -267,7 +269,8 @@ public class JDlgEditoras_mgar extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-      
+      JDlgEditorasPesquisar jDlgEditorasPesquisar = new JDlgEditorasPesquisar(null, true);
+        jDlgEditorasPesquisar.setVisible(true);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
@@ -296,16 +299,16 @@ Util.habilitar(true, jBtnAlterar, jBtnCancelar, jBtnConfirmar, jBtnExcluir, jBtn
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-      Util.habilitar(true, jBtnAlterar, jBtnCancelar, jBtnConfirmar, jBtnExcluir, jBtnPesquisar,
-                jBtnIncluir, jTxtCodigo_mgar, jTxtNome_mgar, jTxtPaisOrigem_mgar,jFmtDataFundacao_mgar,
-                jTxtSiteOficial_mgar, jTxtCeo_mgar, jTxtObservacoes_mgar);
+      int resp = JOptionPane.showConfirmDialog(null, "Deseja excluir?",
+                "Deletar Registro", JOptionPane.YES_NO_OPTION);
         
-        Util.habilitar(false, jBtnAlterar, jBtnExcluir, jBtnPesquisar, 
-                jBtnIncluir);
-        
-        Util.limpar(jTxtCodigo_mgar, jTxtNome_mgar, jTxtPaisOrigem_mgar,jFmtDataFundacao_mgar,
+       if (resp == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Exclusão realizada.");
+            Util.limpar(jTxtCodigo_mgar, jTxtNome_mgar, jTxtPaisOrigem_mgar,jFmtDataFundacao_mgar,
                 jTxtSiteOficial_mgar, jTxtCeo_mgar, jTxtObservacoes_mgar);
-       
+        } else {
+            JOptionPane.showMessageDialog(null, "Exclusão cancelada");
+        }
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jTxtCeo_mgarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtCeo_mgarActionPerformed

@@ -396,19 +396,19 @@ public class JDlgClientes_mgar extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-
-        Util.habilitar(true, jBtnAlterar, jBtnCancelar, jBtnConfirmar, jBtnExcluir, jBtnPesquisar,
-                jBtnIncluir, jFmtCep_mgar, jFmtCpf_mgar, jFmtDataCadastro_mgar,
-                jFmtDataNascimento_mgar, jFmtNumeroCelular_mgar, jFmtRg_mgar,
-                jFmtTelefoneResidencial_mgar, jTxtApelido_mgar, jTxtBairro_mgar, jTxtCidade_mgar,
-                jTxtCodigo_mgar, jTxtEmail_mgar, jTxtEndereco_mgar, jTxtNome_mgar, jTxtEstado_mgar);
-
-        Util.habilitar(false, jBtnAlterar, jBtnExcluir, jBtnPesquisar,
-                jBtnIncluir);
-        Util.limpar(jFmtCep_mgar, jFmtCpf_mgar, jFmtDataCadastro_mgar,
+        int resp = JOptionPane.showConfirmDialog(null, "Deseja excluir?",
+                "Deletar Registro", JOptionPane.YES_NO_OPTION);
+        if (resp == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Exclusão realizada.");
+            Util.limpar(jFmtCep_mgar, jFmtCpf_mgar, jFmtDataCadastro_mgar,
                 jFmtDataNascimento_mgar, jFmtNumeroCelular_mgar, jFmtRg_mgar,
                 jFmtTelefoneResidencial_mgar, jTxtApelido_mgar, jTxtBairro_mgar, jTxtCidade_mgar,
                 jTxtCodigo_mgar, jTxtEmail_mgar, jTxtEndereco_mgar, jTxtNome_mgar, jTxtEndereco_mgar);
+        } else {
+            JOptionPane.showMessageDialog(null, "Exclusão cancelada");
+        }
+       
+
         // TODO add your handling code here:
 
     }//GEN-LAST:event_jBtnExcluirActionPerformed
