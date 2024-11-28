@@ -61,13 +61,13 @@ public class JDlgProdutos_mgar extends javax.swing.JDialog {
         jBtnCancelar = new javax.swing.JButton();
         jBtnPesquisar = new javax.swing.JButton();
         jBtnIncluir = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLbCodigo = new javax.swing.JLabel();
+        jLbDataNasc = new javax.swing.JLabel();
+        jLbNome = new javax.swing.JLabel();
+        jLbPreco = new javax.swing.JLabel();
+        jLbclassificacao = new javax.swing.JLabel();
+        jLbGenero = new javax.swing.JLabel();
+        jLbDiretor = new javax.swing.JLabel();
         jTxtCodigo_mgar = new javax.swing.JTextField();
         jTxtNome_mgar = new javax.swing.JTextField();
         jFmtDataLancamento_mgar = new javax.swing.JFormattedTextField();
@@ -126,19 +126,19 @@ public class JDlgProdutos_mgar extends javax.swing.JDialog {
             }
         });
 
-        jLabel1.setText("Código:");
+        jLbCodigo.setText("Código:");
 
-        jLabel2.setText("Data de Lançamento:");
+        jLbDataNasc.setText("Data de Lançamento:");
 
-        jLabel3.setText("Nome:");
+        jLbNome.setText("Nome:");
 
-        jLabel4.setText("Preço:");
+        jLbPreco.setText("Preço:");
 
-        jLabel5.setText("Classificação de Idade:");
+        jLbclassificacao.setText("Classificação de Idade:");
 
-        jLabel6.setText("Gênero:");
+        jLbGenero.setText("Gênero:");
 
-        jLabel7.setText("Diretor");
+        jLbDiretor.setText("Diretor");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,14 +160,14 @@ public class JDlgProdutos_mgar extends javax.swing.JDialog {
                                 .addComponent(jBtnConfirmar))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
+                                    .addComponent(jLbNome)
                                     .addComponent(jTxtNome_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6))
+                                    .addComponent(jLbGenero))
                                 .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
+                                    .addComponent(jLbPreco)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLbDataNasc, javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jFmtDataLancamento_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jTxtPreco_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
@@ -181,16 +181,16 @@ public class JDlgProdutos_mgar extends javax.swing.JDialog {
                         .addGap(537, 537, 537))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
+                            .addComponent(jLbCodigo)
                             .addComponent(jTxtCodigo_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7))
+                            .addComponent(jLbDiretor))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTxtDiretor_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jTxtClassificacaoIdade_mgar, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(jLbclassificacao, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -201,31 +201,31 @@ public class JDlgProdutos_mgar extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addComponent(jLbCodigo)
                                 .addGap(27, 27, 27))
                             .addComponent(jTxtCodigo_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
+                        .addComponent(jLbNome)
                         .addGap(27, 27, 27))
                     .addComponent(jTxtNome_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addComponent(jLbDataNasc)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jFmtDataLancamento_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6))
+                    .addComponent(jLbPreco)
+                    .addComponent(jLbGenero))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtGenero_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtPreco_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
+                .addComponent(jLbDiretor)
                 .addGap(3, 3, 3)
                 .addComponent(jTxtDiretor_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
+                .addComponent(jLbclassificacao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTxtClassificacaoIdade_mgar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -373,13 +373,13 @@ Util.habilitar(false, jBtnAlterar, jBtnCancelar, jBtnConfirmar, jBtnExcluir, jBt
     private javax.swing.JButton jBtnIncluir;
     private javax.swing.JButton jBtnPesquisar;
     private javax.swing.JFormattedTextField jFmtDataLancamento_mgar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLbCodigo;
+    private javax.swing.JLabel jLbDataNasc;
+    private javax.swing.JLabel jLbDiretor;
+    private javax.swing.JLabel jLbGenero;
+    private javax.swing.JLabel jLbNome;
+    private javax.swing.JLabel jLbPreco;
+    private javax.swing.JLabel jLbclassificacao;
     private javax.swing.JTextField jTxtClassificacaoIdade_mgar;
     private javax.swing.JTextField jTxtCodigo_mgar;
     private javax.swing.JTextField jTxtDiretor_mgar;
